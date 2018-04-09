@@ -14,7 +14,7 @@ n_hidden = 2
 X[1,6:] = 0
 X_lengths = [10, 6]
  
-cell = tf.nn.rnn_cell.LSTMCell(num_units=64, state_is_tuple=True)
+cell = tf.nn.rnn_cell.LSTMCell(num_units=n_hidden, state_is_tuple=True)
  
 outputs, last_states = tf.nn.dynamic_rnn(
     cell=cell,
